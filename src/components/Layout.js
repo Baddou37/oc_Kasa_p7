@@ -5,7 +5,7 @@ import NavBar from './Navbar';
 
 const Layout = () => {
   return (
-    <body>
+    <div className='body'>
       <div className="Layout">
         <NavBar />
         <Outlet />
@@ -13,7 +13,7 @@ const Layout = () => {
       <div>
         <Footer />
       </div>
-    </body>
+    </div>
   );
 };
 
