@@ -1,5 +1,5 @@
-.collapseAP {
-    max-width: 335px;
+.collapse {
+    width: 100%;
     height: auto;
     background: $grey;
     border-radius: 5px;
@@ -7,10 +7,9 @@
     @media screen and (min-width: 900px) {
         max-width: 1023px;
     }
-        
-    }
+}
 
-.collapseAP_visible {
+.collapse_visible {
     background: $color-1;
     border-radius: 5px;
     cursor: pointer;
@@ -25,7 +24,7 @@
     }
 }
 
-.collapseAP_visible h3 {
+.collapse_visible h3 {
     color: $white;
     font-weight: 500;
     font-size: 13px;
@@ -36,18 +35,30 @@
     }
 }
 
-.collapseAP_icon i {
+.collapse_icon i {
     color: $white;
     @media screen and (min-width: 900px) {
         font-size: 24px;
     }
-        
-    }
+}
 
-.collapseAP_toggle {
+.collapse_toggle {
     font-size: 18px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, height 0.3s 0.3s ease-in-out;
+
+    ul {
+        padding: 22px 15px;
+        margin: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        @media screen and (min-width: 900px) {
+            padding: 22px 30px;
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
 }
 
 .animated {
@@ -55,7 +66,7 @@
     transition: height 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out;
 }
 
-.collapseAP_toggle p {
+.collapse_toggle p {
     padding: 22px 15px;
     margin: 0;
     pointer-events: none;
@@ -67,6 +78,4 @@
         font-size: 18px;
         line-height: 26px;
     }
-        
-    
 }

@@ -21,6 +21,7 @@ function App() {
               <Route path="/about" element={<About />} />
               {/* Erreur URL */}
               <Route path="*" element={<NotFound />} />
+              <Route path="/404" element={<NotFound />} />
             </Route>
           </Routes>
         </>

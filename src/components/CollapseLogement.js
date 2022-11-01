@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-export default function CollapseAP({props}) {
+export default function Collapse({ props, title }) {
     const ChevronDown = <i className="fa-solid fa-chevron-down"></i>;
     const ChevronUp = <i className="fa-solid fa-chevron-up"> </i>;
     const [toggle, setToggle] = useState(false);
@@ -16,11 +16,25 @@ export default function CollapseAP({props}) {
         setHeightEl(`${refHeight.current.scrollHeight}px`);
     }, []);
 
+    const displayProps = () => {
+        if(typeof props === "object"){
+            return (
+                <ul>
+                    {props.map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))}
+                </ul>
+            )
+        }else{
+            return <p>{props}</p>
+        }
+    }
+
     return (
-        <div className="collapseAP">
-            <div onClick={toggleState} className="collapseAP_visible">
-                <h3>{props.title}</h3>
-                <div className="collapseAP_icon"> 
+        <div className="collapse">
+            <div onClick={toggleState} className="collapse_visible">
+                <h3>{title}</h3>
+                <div className="collapse_icon">
                     {toggle ? ChevronUp : ChevronDown}
                 </div>
             </div>
@@ -28,13 +42,11 @@ export default function CollapseAP({props}) {
             <div
                 ref={refHeight}
                 className={
-                    toggle ? "collapseAP_toggle animated" : "collapseAP_toggle"
+                    toggle ? "collapse_toggle animated" : "collapse_toggle"
                 }
                 style={{ height: toggle ? `${heightEl}` : "0px" }}
             >
-                <p>
-                    {props.text}
-                </p>
+                {displayProps()}  
             </div>
         </div>
     );
