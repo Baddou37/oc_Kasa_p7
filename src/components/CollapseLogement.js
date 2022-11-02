@@ -17,18 +17,18 @@ export default function Collapse({ props, title }) {
     }, []);
 
     const displayProps = () => {
-        if(typeof props === "object"){
+        if (typeof props === "object") {
             return (
                 <ul>
                     {props.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
                 </ul>
-            )
-        }else{
-            return <p>{props}</p>
+            );
+        } else {
+            return <p>{props}</p>;
         }
-    }
+    };
 
     return (
         <div className="collapse">
@@ -46,7 +46,7 @@ export default function Collapse({ props, title }) {
                 }
                 style={{ height: toggle ? `${heightEl}` : "0px" }}
             >
-                {displayProps()}  
+                {displayProps()}
             </div>
         </div>
     );

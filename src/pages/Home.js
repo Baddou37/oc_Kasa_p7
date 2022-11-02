@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 import Properties from "../data/logements";
-import BGHome from "../assets/home_bg_banner.png";
+import BGHome from "../assets/home_bg_banner.png"
 
 
 export default function Home() {

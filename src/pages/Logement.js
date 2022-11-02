@@ -32,7 +32,7 @@ export default function Logement() {
     });
 
     if (!logementTitle) {
-        return <Navigate to="/404" />;
+        return <Navigate to="/404"/>;
     }
 
     return (

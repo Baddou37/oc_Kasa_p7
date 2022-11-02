@@ -1,7 +1,8 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 const NotFound = () => {
+    document.title = "Kasa - Page introuvable";
+
     return (
         <main className="not_found_main">
             <div>

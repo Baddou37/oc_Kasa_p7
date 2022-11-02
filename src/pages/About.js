@@ -5,6 +5,7 @@ import Data from "../data/about";
 import BGBanner from "../assets/about_bg_banner.png";
 
 export default function About() {
+    document.title = "Kasa - A propos de nous";
     return (
         <main className="display_about">
             <Banner img={BGBanner} />
