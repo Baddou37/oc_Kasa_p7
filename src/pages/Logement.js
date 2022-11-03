@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "../components/Slideshow";
-import Collapse from "../components/CollapseLogement";
+import Collapse from "../components/Collapse";
 import Logements from "../data/logements.json";
 import { useParams, Navigate } from "react-router-dom";
 import Tag from "../components/Tag";
@@ -59,7 +59,7 @@ export default function Logement() {
                             <span>{logementHost.name}</span>
                             <img
                                 src={`${logementHost.picture}`}
-                                alt={`Photo de ${logementHost.name}`}
+                                alt={`${logementHost.name}`}
                             />
                         </div>
                     </div>
