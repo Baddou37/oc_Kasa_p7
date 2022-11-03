@@ -6,11 +6,6 @@ import BGBanner from "../assets/about_bg_banner.png";
 
 export default function About() {
     document.title = "Kasa - A propos de nous";
-
-    const data = Data;
-    console.table(data);
-    console.log();
-
     return (
         <main className="display_about">
             <Banner img={BGBanner} />
@@ -20,7 +15,7 @@ export default function About() {
                         <Collapse
                             key={index}
                             props={Data[index].text}
-                            title={data[index].title}
+                            title={Data[index].title}
                         />
                     </div>
                 ))}
