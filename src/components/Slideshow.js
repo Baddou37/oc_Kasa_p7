@@ -35,17 +35,6 @@ const Slideshow = ({ images }) => {
         setSliderPosition(newPosition);
     };
 
-    const nextSlideAuto = () => {
-        let newPosition = sliderPosition;
-        if (newPosition < images.length - 1) {
-            newPosition = newPosition + 1;
-        } else if (newPosition === images.length - 1) {
-            newPosition = 0;
-        }
-        translateFullSlides(newPosition);
-        setSliderPosition(newPosition);
-    };
-
     const translateFullSlides = (newPosition) => {
         let toTranslate = -widthSpan * newPosition;
         for (let i = 0; i < images.length; i++) {
@@ -57,8 +46,8 @@ const Slideshow = ({ images }) => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            nextSlideAuto();
-        }, 5000);
+            nextSlide();
+        }, 3500);
         return () => clearInterval(interval);
     }, [sliderPosition]);
 
